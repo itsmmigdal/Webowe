@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100%;
+    background-color: #252a3a;
+    font-size: 16px;
+    color: white;
+}
+
+#lista {
+    padding-left: 10px;
+}
+
+.link {
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+#inboxl {
+    color: #44688c;
+}
+
+#labels {
+    color: #44688c;
+}
+
+.kol {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.kolor {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+#kolor1 {
+    background-color: #ffc94c;
+}
+
+#kolor2 {
+    background-color: #41ccb4;
+}
+
+#kolor3 {
+    background-color: #40c365;
+}
+
+#compose {
+    color: white;
+    background-color: #1B98F8;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin: 16px;
+}
+
+#kontakty {
+    display: flex;
+    margin-left: 150px;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+}
+
+#pierwszy {
+    background-color: #eee;
+}
+
+#dit {
+    border-left: 6px, #1B98F8;
+}
+
+.kont {
+    padding: 14px 16px;
+    border: 1px solid #eaeaea;
+    display: inline;
+}
+
+.ava {
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.maintitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.naz {
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.tyt {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.zaj {
+    font-size: 13px;
+    color: black;
+    margin: 7px 0;
+}
+
+#mail {
+    flex: box;
+}
