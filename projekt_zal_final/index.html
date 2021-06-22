@@ -7,6 +7,7 @@
     <title>EIVEYI | Welcome To Eiveyi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
@@ -19,7 +20,7 @@
         <nav class="nav container">
             <a href="#" class="nav__logo">E I V E Y I</a>
 
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu container" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="index.html" class="nav__link">Home</a>
@@ -63,6 +64,25 @@
         
         
         </section>
+
+        <section class="video section">
+            <h2 class="section__title"> Who's she? </h2>
+
+            <div class="video__container container">
+                <p class="video__description">Check It Out.
+                </p>
+
+                <div class="video__content">
+                    <video id="video-file">
+                        <source src="assets/video/Eloise - Who’s She.webm" type="video/mp4">
+                    </video>
+
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer section">
@@ -70,20 +90,20 @@
             <div class="footer__content grid">
                 <div class="footer__data">
                     <div>
-                        <a href="https://www.facebook.com/" target="_blank" class="footer__social" rel="noopener">
-                            <i class="fa fa-facebook"></i>
+                        <a href="https://www.facebook.com/" class="footer__social">
+                            <i class="fab fa-facebook fa-2x"></i>
                         </a>
-                        <a href="https://www.twitter.com/" target="_blank" class="footer__social">
-                            <i class="fa fa-twitter"></i>
+                        <a href="https://www.twitter.com/" class="footer__social">
+                            <i class="fab fa-twitter fa-2x"></i>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
-                            <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/" class="footer__social">
+                            <i class="fab fa-instagram fa-2x"></i>
                         </a>
-                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
-                            <i class="fa fa-youtube"></i>
+                        <a href="https://www.youtube.com/" class="footer__social">
+                            <i class="fab fa-youtube fa-2x"></i>
                         </a>
-                        <a href="https://www.spotify.com/" target="_blank" class="footer__social">
-                            <i class="fa fa-spotify"></i>
+                        <a href="https://www.spotify.com/" class="footer__social">
+                            <i class="fab fa-spotify fa-2x"></i>
                         </a>
                     </div>
                 </div>
