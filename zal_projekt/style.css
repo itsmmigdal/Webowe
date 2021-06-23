@@ -1,0 +1,464 @@
+/*
+ * MENU BUTTON
+ */
+@import url("https://fonts.googleapis.com/css?family=K2D");
+.menu__toggler {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  height: 28px;
+  width: 28px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu__toggler span,
+.menu__toggler span::before,
+.menu__toggler span::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background: #000;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.menu__toggler span::before {
+  top: -8px;
+}
+.menu__toggler span::after {
+  top: 8px;
+}
+.menu__toggler.active > span {
+  background: transparent;
+}
+.menu__toggler.active > span::before, .menu__toggler.active > span::after {
+  background: #000;
+  top: 0px;
+}
+.menu__toggler.active > span::before {
+  transform: rotate(-225deg);
+}
+.menu__toggler.active > span::after {
+  transform: rotate(225deg);
+}
+
+/*
+ * SLIDING MENU PANEL
+ */
+.menu {
+  position: fixed;
+  left: -30%;
+  z-index: 998;
+  color: #000;
+  background: rgba(250, 250, 250, 0.7);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  width: 30%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 250px;
+    left: -250px;
+    padding: 50px;
+  }
+}
+.menu.active {
+  left: 0;
+}
+.menu a {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+ * BASIC STYLES
+ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #FFF;
+  font-family: "K2D", sans-serif;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.wrapper-header{
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/Concert_hall_rock_concert-1366x668.jpg);
+  background-size: cover;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+nav{
+  width: 100%;
+  margin-top: 20px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-button {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, .7);
+  transition: all 0.2s ease;
+}
+.buy-button:before, .buy-button:after {
+  content: "PREORDER NOW";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 0;
+  width: 100%;
+  -webkit-clip: rect(0px, 0px, 0px, 0px);
+  clip: rect(0px, 0px, 0px, 0px);
+  background: #addbcb;
+  color: #000;
+}
+.buy-button:before {
+  left: -3px;
+  top: -2px;
+  text-shadow: 2px 0 #000;
+  box-shadow: 2px 0 #000;
+}
+.buy-button:after {
+  left: 2px;
+  bottom: -2px;
+  text-shadow: -1px 0 #000;
+  box-shadow: -1px 0 #000;
+}
+.buy-button:hover {
+  background: #000;
+  color: #FFF;
+}
+.buy-button:hover:before {
+  animation: glitch-button 1.5s infinite linear alternate-reverse;
+}
+.buy-button:hover:after {
+  -webkit-animation: glitch-button 2s infinite linear alternate;
+          animation: glitch-button 2s infinite linear alternate;
+}
+
+@-webkit-keyframes glitch-button {
+  0% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  5.88235% {
+    clip: rect(0px, 600px, 0px, 0px);
+  }
+  11.76471% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  17.64706% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  23.52941% {
+    clip: rect(100px, 600px, 100px, 0px);
+  }
+  29.41176% {
+    clip: rect(0px, 600px, 600px, 0px);
+  }
+  35.29412% {
+    clip: rect(100px, 600px, 0px, 0px);
+  }
+  41.17647% {
+    clip: rect(0px, 600px, 600px, 0px);
+  }
+  47.05882% {
+    clip: rect(100px, 600px, 0px, 0px);
+  }
+  52.94118% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  58.82353% {
+    clip: rect(100px, 450px, 100px, 0px);
+  }
+  64.70588% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  70.58824% {
+    clip: rect(100px, 450px, 100px, 0px);
+  }
+  76.47059% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  82.35294% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  88.23529% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  94.11765% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  100% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+}
+
+@keyframes glitch-button {
+  0% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  5.88235% {
+    clip: rect(0px, 600px, 0px, 0px);
+  }
+  11.76471% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  17.64706% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  23.52941% {
+    clip: rect(100px, 600px, 100px, 0px);
+  }
+  29.41176% {
+    clip: rect(0px, 600px, 600px, 0px);
+  }
+  35.29412% {
+    clip: rect(100px, 600px, 0px, 0px);
+  }
+  41.17647% {
+    clip: rect(0px, 600px, 600px, 0px);
+  }
+  47.05882% {
+    clip: rect(100px, 600px, 0px, 0px);
+  }
+  52.94118% {
+    clip: rect(-3px, 600px, 0px, 0px);
+  }
+  58.82353% {
+    clip: rect(100px, 450px, 100px, 0px);
+  }
+  64.70588% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  70.58824% {
+    clip: rect(100px, 450px, 100px, 0px);
+  }
+  76.47059% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  82.35294% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  88.23529% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  94.11765% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+  100% {
+    clip: rect(0px, 450px, 0px, 0px);
+  }
+}
+
+.wrapper-main {
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0f0f0f;
+}
+
+.image-slider {
+  z-index: 0;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-slide {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.slick-slide.slick-center {
+  transform: scale(1.2);
+  transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+}
+
+.slick-slide {
+  transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+}
+
+.slider-control {
+  margin: 0%;
+  position: absolute;
+  z-index: 2;
+  bottom: 8%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+button {
+  color: #fff;
+  background: none;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  font-size: 16px;
+  border-radius: 50%;
+  margin: .4em;
+  display: inline-block;
+  transition: all .3s ease-in-out;
+}
+
+button:hover{
+  background-color: #FFF;
+  color: #000;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.block-1 {
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 5%;
+  left: 0%;
+  background: #0f0f0f;
+}
+
+.block-2 {
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 25%;
+  left: 25%;
+  background: #0f0f0f;
+}
+
+.block-3 {
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 5%;
+  right: 0%;
+  background: #0f0f0f;
+}
+
+.overlay {
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 20%;
+  left: 5%;
+  background: rgba(0, 0, 0, .65);
+}
+
+.text-slider-wrapper {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 45%;
+}
+
+.text-slider {
+  margin: 0%;
+  padding: 0%;
+  height: 100vh;
+}
+
+.text-slide h1 {
+  color: #fff;
+  font-size: 64px;
+  font-family: "Cinzel";
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding-left: 10%;
+}
+
+@media(max-width: 990px) {
+  .block-2, .overlay {
+        display: none;
+  }
+
+  .block-1 {
+        width: 50%;
+  }
+
+  .block-3 {
+        width: 12%;
+  }
+
+  .slide-slick {
+        display: none !important;
+  }
+
+  .text-slide h1 {
+        font-size: 30px !important;
+  }
+
+  .text-slider-wrapper {
+        position: absolute;
+        top: 60% !important;
+  }
+
+  .slider-control {
+        left: 22.5%;
+  }
+}
+
+.wrapper-footer{
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0f0f0f;
+}
+
+.wrapper-footer iframe{
+  width: 100%;
+  height: 100%;
+}
+
+img {
+    width: 25%;
+    display: block;
+}
