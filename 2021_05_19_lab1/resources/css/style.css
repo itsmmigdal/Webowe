@@ -10,7 +10,7 @@
 body{
 	font-family: 'Roboto Condensed';
 	text-transform: uppercase;
-	background: #52D7DB;
+	background: #1d1ac0;
 	height: 100%;
 	overflow: hidden;
 }
@@ -55,7 +55,7 @@ nav ul li a{
 }
 
 .front{
-	background: #dbb652;
+	background: #2cd849;
 }
 
 input[type=checkbox]
