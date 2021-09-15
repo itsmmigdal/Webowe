@@ -56,13 +56,3 @@ h1 {
       background-image: url(../img/backgorund_index.png);
       background-size   : cover;
   }
-
-  .pojemink{
-    width: 200px;
-    height: 200px;
-  }
-
-  .pojemnik div{
-    width: 100px;
-    height: 100px;
-  }
