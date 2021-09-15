@@ -62,4 +62,7 @@ h1 {
     height: 200px;
   }
 
-  
+  .pojemnik div{
+    width: 100px;
+    height: 100px;
+  }
