@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .intro{
     height: 100%;
     width: 100%;
@@ -55,4 +56,63 @@ h1 {
       height: 100vh;
       background-image: url(../img/backgorund_index.png);
       background-size   : cover;
+=======
+.intro{
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Consolas", sans-serif;
+    font-size: 10vw;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  h1 span {
+    display: inline-block;
+  }
+  h1.position-1 span:nth-child(1) {
+    transform: rotate(180deg);
+  }
+  h1.position-2 span:nth-child(2) {
+    transform: rotate(180deg);
+  }
+  h1.position-3 span:nth-child(3) {
+    transform: rotate(180deg);
+  }
+  h1.position-4 span:nth-child(4) {
+    transform: rotate(180deg);
+  }
+  h1.position-5 span:nth-child(5) {
+    transform: rotate(180deg);
+  }
+
+  p{
+    margin-bottom: 1rem;
+    font-family: Consolas;
+    font-size: 1.5rem;
+  }
+
+  .button{
+      background: transparent;
+      padding: 1.5rem;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      font-family: Consolas;
+  }
+  .button:hover{
+      cursor: pointer;
+  }
+
+  .intro-button{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .wallpaper{
+      height: 100vh;
+      background-image: url(../img/backgorund_index.png);
+      background-size   : cover;
+>>>>>>> 19eadb5464589557f10762684fd597bb21048707
   }
