@@ -1,0 +1,44 @@
+body {
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+.logo .subtitle span{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #A9B0B6;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.logo {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#wrapper {
+    width: 430px;
+}
+
+.photo-gallery {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 2.5px;
+}
+
+.photo-gallery div img {
+    padding: 2.5px;
+}
